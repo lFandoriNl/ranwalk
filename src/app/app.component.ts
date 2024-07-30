@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'rw-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styles: `
+    :host {
+      height: 100%;
+      display: block;
+    }
+  `,
+  template: `<router-outlet />`,
 })
-export class AppComponent {
-  title = 'ranwalk';
-}
+export class AppComponent {}
